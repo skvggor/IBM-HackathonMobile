@@ -1,14 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-		<!-- Licensed Materials - Property of IBM
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Licensed Materials - Property of IBM
 			 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
 			 US Government Users Restricted Rights - Use, duplication or
-             disclosure restricted by GSA ADP Schedule Contract with IBM Corp. -->
-
-<!-- Attribute "id" must be identical to application folder name -->
-<application id="OurApp" platformVersion="6.1.0.00.20131219-1900"
-	xmlns="http://www.worklight.com/application-descriptor" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+             disclosure restricted by GSA ADP Schedule Contract with IBM Corp. --><!-- Attribute "id" must be identical to application folder name --><application xmlns="http://www.worklight.com/application-descriptor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="OurApp" platformVersion="6.1.0.00.20131126-0630">
 
 	<displayName>OurApp</displayName>
 	<description>OurApp</description>
