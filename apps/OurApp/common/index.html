@@ -1,45 +1,64 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>NomeDoApp</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+<head>
+<meta charset="UTF-8">
+<title>NomeDoApp</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
 
-		<link rel="shortcut icon" href="images/favicon.png">
-		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	
-		<!-- CSS -->
-		<link rel="stylesheet" href="css/libs/jquery.mobile-1.3.2.css">
-		<link rel="stylesheet" href="css/main.css">
-	</head>
-	<body>
-		<!-- APP -->
+<link rel="shortcut icon" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
-		<!-- Página Inicial -->
-		<div class="layout-pagina-inicial" data-role="page" data-fullscreen="true"> 
-			<div data-role="header">
-				<h1>Hello World!</h1>
-			</div> 
-				
-			<div data-role="content">
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel risus 
-					mollis, tempor elit at, lacinia odio. Praesent ut ultrices odio, ut fermentum
-					est. Cras ultricies nisi ac venenatis convallis. Pellentesque id congue nunc.
-					Maecenas vitae elit commodo, semper eros et, cursus odio. Donec faucibus elit eros,
-					in aliquet ipsum faucibus sit amet. Proin vulputate leo sem, eget dignissim urna 
-					malesuada vestibulum.
-				<p>	
-			</div>
+<!-- CSS -->
+<link rel="stylesheet" href="css/libs/jquery.mobile-1.3.2.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<!-- APP -->
 
-			<div data-role="footer">...</div>
-		</div> 
-				
-		<!-- JAVASCRIPT -->
-		<script src="js/libs/jquery.js"></script>
-		<script src="js/libs/jquery.mobile-1.3.2.js"></script>
-		<!-- <script src="js/initOptions.js"></script> -->
-		<!-- <script src="js/main.js"></script> -->
-		<!-- <script src="js/messages.js"></script> -->
-	</body>
+	<!-- Página Inicial -->
+	<div class="layout-pagina-inicial" data-role="page"
+		data-fullscreen="true">
+		<div data-role="header">
+			<h1>Hello World!</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+				vel risus mollis, tempor elit at, lacinia odio. Praesent ut ultrices
+				odio, ut fermentum est. Cras ultricies nisi ac venenatis convallis.
+				Pellentesque id congue nunc. Maecenas vitae elit commodo, semper
+				eros et, cursus odio. Donec faucibus elit eros, in aliquet ipsum
+				faucibus sit amet. Proin vulputate leo sem, eget dignissim urna
+				malesuada vestibulum.
+			<p>
+		</div>
+
+		<div data-role="footer">...</div>
+	</div>
+
+	<!-- Formulário de cadastro -->
+	<div class="layout-form-cadastro" data-role="page">
+		<div data-role="header">
+			<h1>Cadastro</h1>
+		</div>
+
+		<div data-role="content">
+			<form class="form-cadastro">
+				<input type="text" name="text" id="txt-nome" placeholder="Nome">
+				<input type="text" name="text" id="txt-email" placeholder="E-mail">
+				<input type="text" name="text" id="txt-email" placeholder="E-mail">
+			</form>
+		</div>
+
+		<div data-role="footer">...</div>
+	</div>
+
+	<!-- JAVASCRIPT -->
+	<script src="js/libs/jquery.js"></script>
+	<script src="js/libs/jquery.mobile-1.3.2.js"></script>
+	<!-- <script src="js/initOptions.js"></script> -->
+	<!-- <script src="js/main.js"></script> -->
+	<!-- <script src="js/messages.js"></script> -->
+</body>
 </html>
