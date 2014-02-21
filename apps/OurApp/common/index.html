@@ -37,7 +37,7 @@
 	</div><!-- layout-form-cadastro -->
 
 	<!-- Formulário de cadastro -->
-	<div class="layout-form-cadastro" data-role="page">
+	<div class="layout-form-cadastro" data-role="page" id="pagina-cadastro">
 		<div data-role="header">
 			<h1>Cadastro</h1>
 		</div>
@@ -46,7 +46,18 @@
 			<form class="form-cadastro">
 				<input type="text" name="text" id="txt-nome" placeholder="Nome">
 				<input type="text" name="text" id="txt-email" placeholder="E-mail">
-				<input type="text" name="text" id="txt-email" placeholder="E-mail">
+				<!-- Lista de paises que deve ser gerada dinamicamente -->
+				<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-filter-placeholder="País" class="lista-paises">
+					<li data-corners="false" data-shadow="false" data-iconshadow="true" data-wrapperels="div" data-icon="arrow-r" data-iconpos="right" data-theme="c" >
+						<div>
+							<div>
+								<a href="index.html">Brasil</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<label>Foto de perfil</label>
+				<input type="file" name="image" accept="image/*">
 			</form>
 		</div>
 
