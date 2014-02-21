@@ -1,24 +1,73 @@
-function wlCommonInit(){
-
-	/*
-	 * Application is started in offline mode as defined by a connectOnStartup property in initOptions.js file.
-	 * In order to begin communicating with Worklight Server you need to either:
-	 * 
-	 * 1. Change connectOnStartup property in initOptions.js to true. 
-	 *    This will make Worklight framework automatically attempt to connect to Worklight Server as a part of application start-up.
-	 *    Keep in mind - this may increase application start-up time.
-	 *    
-	 * 2. Use WL.Client.connect() API once connectivity to a Worklight Server is required. 
-	 *    This API needs to be called only once, before any other WL.Client methods that communicate with the Worklight Server.
-	 *    Don't forget to specify and implement onSuccess and onFailure callback functions for WL.Client.connect(), e.g:
-	 *    
-	 *    WL.Client.connect({
-	 *    		onSuccess: onConnectSuccess,
-	 *    		onFailure: onConnectFailure
-	 *    });
-	 *     
-	 */
+jQuery(document).on('pagecreate', function() {
+	var limpaHeader, criarHeader, criarFooter, criarListaPaises, limparFormulario;
 	
-	// Common initialization code goes here
+	limparHeader = function() {
+		var header;
+		
+		header = jQuery('[data-role="header"]');
+		header.remove();
+	};
+	
+	limparFooter = function() {
+		var footer;
+		
+		footer = jQuery('[data-role="footer"]');
+		footer.remove();
+	};
 
-}
+	criarHeader = function() {
+		var headerHTML, titulo;
+
+		titulo = 'Passeios';
+		headerHTML = '<div role="banner" class="ui-header ui-bar-a" data-role="header">' +
+						'<h1 aria-level="1" role="heading" class="ui-title">' +  titulo + '</h1>' +
+					 '</div>';
+
+		jQuery('[data-role="page"]').prepend(headerHTML);
+	};
+	
+	criarFooter = function() {
+		var footerHTML, titulo;
+		
+		titulo = '';
+		footerHTML = '<div role="contentinfo" class="ui-footer ui-bar-a" data-role="footer">' +
+						'<h1 aria-level="1" role="heading" class="ui-title">' + titulo + '</h1>' +
+					 '</div>';
+
+		jQuery('[data-role="page"]').append(footerHTML);
+	};
+	
+	criarListaPaises = function() {
+			jQuery.getJSON('js/data/paises.json', function(response) {
+			var objJSON, elementosLista, select;
+			
+			objJSON = response;
+			options = '';
+			select = jQuery('[name="pais"]');
+
+			jQuery.each(objJSON, function(i) {
+				options += '<option value="' + objJSON[i].code + '">' +
+								objJSON[i].name +
+						   '</option>';
+			});
+			
+			select.prepend(options);
+			select.selectmenu('refresh');
+		});
+	};
+	
+	limparFormulario = function() {
+		var formulario;
+		
+		formulario = jQuery('.form-cadastro form');
+		formulario.attr('class', '');
+	};
+	
+	limparHeader();
+	limparFooter();
+	criarHeader();
+	criarFooter();
+	criarListaPaises();
+	limparFormulario();
+
+});

@@ -1,5 +1,6 @@
-#Thu Feb 20 17:30:20 BRT 2014
+#Fri Feb 21 16:25:41 BRT 2014
 base.iphone=4155040770
+encoding//apps/OurApp/android/css/main.css=UTF-8
 base.android=200347496
 common.android=3995469295
 fipshttp.android=3093829864
@@ -15,5 +16,5 @@ fipshttp.ipad=1366853547
 OurApp.ipad.native=4155040770
 base.ipad=4155040770
 OurApp.iphone.native=4155040770
-analytics.iphone=3764441202
 analytics.android=2195365451
+analytics.iphone=3764441202

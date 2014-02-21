@@ -2,18 +2,24 @@
 <!-- Licensed Materials - Property of IBM
 			 5725-I43 (C) Copyright IBM Corp. 2006, 2013. All Rights Reserved.
 			 US Government Users Restricted Rights - Use, duplication or
-             disclosure restricted by GSA ADP Schedule Contract with IBM Corp. --><!-- Attribute "id" must be identical to application folder name --><application xmlns="http://www.worklight.com/application-descriptor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="OurApp" platformVersion="6.1.0.00.20131126-0630">
-
-	<displayName>OurApp</displayName>
-	<description>"NomeDoApp" - Reunindo pessoas diferentes com mesmo interesse em lugares legais.</description>
-	<author>
-		<name>Cauê, Gabriel, Marcos e Marco</name>
-		<email></email>
-		<copyright></copyright>
-		<homepage>https://github.com/marcker/IBM-HackathonMobile</homepage>
-	</author>
-	<mainFile>index.html</mainFile>
-	<thumbnailImage>common/images/thumbnail.png</thumbnailImage> 
-	<features>
-	</features>
+             disclosure restricted by GSA ADP Schedule Contract with IBM Corp. --><!-- Attribute "id" must be identical to application folder name --><application xmlns="http://www.worklight.com/application-descriptor" id="OurApp" platformVersion="6.1.0.00.20131126-0630">
+    <displayName>OurApp</displayName>
+    <description>"NomeDoApp" - Reunindo pessoas diferentes com mesmo interesse em lugares legais.</description>
+    <author>
+        <name>Cauê, Gabriel, Marcos e Marco</name>
+        <email>contato@passeiosapp.com.br</email>
+        <homepage>https://github.com/marcker/IBM-HackathonMobile</homepage>
+        <copyright>IBM</copyright>
+    </author>
+    <mainFile>index.html</mainFile>
+    <features/>
+    <thumbnailImage>common/images/thumbnail.png</thumbnailImage>
+    <android version="1.0">
+        <worklightSettings include="true"/>
+        <security>
+            <encryptWebResources enabled="false"/>
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
+            <publicSigningKey>Replace this text with the actual public signing key of the certificate used to sign the APK, available by using the 'Extract public signing key' wizard.</publicSigningKey>
+        </security>
+    </android>
 </application>
