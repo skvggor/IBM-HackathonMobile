@@ -16,44 +16,80 @@
 </head>
 <body>
 	<!-- APP -->
-
-	<!-- Página Inicial -->
-	<div class="layout-pagina-inicial" data-role="page" data-fullscreen="true">
+	<!-- Página HOME -->
+	<div class="layout-pagina-home" data-role="page" id="pagina-home">
+		<div id="home">
+			<div align="center">
+				<img class="logotipo" src="images/logo-app.png" alt="Passeios - Reunindo pessoas diferentes com mesmos interesses em lugares legais">
+			</div>
+	
+			<div align="center">	
+				<h2>Reunindo pessoas diferentes com mesmos interesses em lugares legais</h2>
+				<div class="rodapehome">	
+					<div class="cadastrar">
+						<form id="cadformulario">
+							<a href="#pagina-entrar" data-role="button" id="button">Entrar</a>
+							<a href="#pagina-cadastro" data-role="button" id="button">Registrar</a>
+							<a class="facebook-button" href="index.html" data-role="button" data-theme="a">Facebook</a>			
+						</form>	
+					</div>	
+				</div>
+			</div>
+		</div>
+	</div><!-- Home -->
+	
+	<!-- Página login -->
+	<div class="layout-pagina-entrar" data-role="page" id="pagina-entrar">
 		<div data-role="content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-				vel risus mollis, tempor elit at, lacinia odio. Praesent ut ultrices
-				odio, ut fermentum est. Cras ultricies nisi ac venenatis convallis.
-				Pellentesque id congue nunc. Maecenas vitae elit commodo, semper
-				eros et, cursus odio. Donec faucibus elit eros, in aliquet ipsum
-				faucibus sit amet. Proin vulputate leo sem, eget dignissim urna
-				malesuada vestibulum.
-			<p>
-		</div><!-- content -->
-	</div><!-- layout-form-cadastro -->
+			<h3>Faça o login com seu e-mail e senha:</h3>		
+				
+			<form class="form-login" id="formulario-cadastro">	
+				<input type="email" name="usuario" id="txt-nome" placeholder="E-mail" required>
+					
+				<input type="password" name="senha" id="txt-email" placeholder="Senha" required>
+					
+				<a data-icon="arrow-l" data-inline="true" href="#pagina-home" data-role="button" id="button">Cancelar</a>
+				<a data-icon="arrow-r" data-inline="true" href="#" data-role="button" id="button">Entrar</a>
+			</form>
+		</div>
+	</div>
+	<!-- Página login -->
 
 	<!-- Formulário de cadastro -->
 	<div class="layout-form-cadastro" data-role="page" id="pagina-cadastro">
 		<div data-role="content">
+			<h3>Preencha os campos abaixo para se registrar:</h3>
 			<form class="form-cadastro" id="formulario-cadastro">
-				<input type="text" name="text" id="txt-nome" placeholder="Nome" required>
+				<input type="text" name="txt-nome" id="txt-nome" placeholder="Nome" required>
 				
-				<input type="email" name="text" id="txt-email" placeholder="E-mail" required>
+				<input type="email" name="txt-email" id="txt-email" placeholder="E-mail" required>
+				
+				<input type="password" name="txt-senha" id="txt-senha" placeholder="Senha" required>
 				
 				<label>País:</label>
-				<select name="pais" id="pais" data-native-menu="false"></select>
+				<select name="pais" id="pais"></select>
 				
 				<label>Foto:</label>
 				<input type="file" name="image" accept="image/*">
 				
+				<a href="#pagina-home" data-icon="arrow-l" data-inline="true" data-role="button" id="btn-cadastrar">Cancelar</a>
 				<a href="#" data-icon="arrow-r" data-inline="true" data-role="button" id="btn-cadastrar">Cadastrar</a>
 			</form>
+		</div>
+	</div>
+	
+	<!-- Formulário de cadastro -->
+	<div class="layout-form-cadastro" data-role="page" id="pagina-mapa">
+		<div data-role="content">
+			<div id="map-canvas"></div>
 		</div>
 	</div>	
 
 	<!-- JAVASCRIPT -->
 	<script src="js/libs/jquery.js"></script>
 	<script src="js/libs/jquery.mobile-1.3.2.js"></script>
-	<!-- <script src="js/initOptions.js"></script> -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9vwy72asMQwHF9T4zqK0HP6Q9htHZJZ0&amp;sensor=true"></script>
+	<script src="js/google.maps.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/messages.js"></script>
 </body>

@@ -10,3 +10,9 @@ body {
 	margin: 0 auto;
 	width: 320px;
 }
+
+.layout-pagina-home{
+	background: url('../images/background-home.png') no-repeat;
+	background-size: cover;
+	
+}

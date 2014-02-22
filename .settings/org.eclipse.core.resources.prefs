@@ -1,20 +1,21 @@
-#Fri Feb 21 16:25:41 BRT 2014
-base.iphone=4155040770
+#Sat Feb 22 09:20:31 BRT 2014
+base.iphone=3577331796
 encoding//apps/OurApp/android/css/main.css=UTF-8
-base.android=200347496
+base.android=1420749232
 common.android=3995469295
-fipshttp.android=3093829864
-wl_version=6.1.0.00.20131126-0630
+fipshttp.android=1259741140
+wl_version=6.1.0.00.20131219-1900
 eclipse.preferences.version=1
 encoding//apps/OurApp/common/css/main.css=UTF-8
-jsonstore.android=398543621
-analytics.ipad=2628336515
-OurApp.android.native=200347496
-fipshttp.iphone=1493928171
+jsonstore.android=2746434164
+analytics.ipad=2383137509
+OurApp.android.native=1420749232
+fipshttp.iphone=4131626944
 encoding//apps/OurApp/common/index.html=UTF-8
-fipshttp.ipad=1366853547
-OurApp.ipad.native=4155040770
-base.ipad=4155040770
-OurApp.iphone.native=4155040770
-analytics.android=2195365451
-analytics.iphone=3764441202
+fipshttp.ipad=1204642243
+OurApp.ipad.native=3577331796
+OurApp.android.warnversion=1.0
+base.ipad=3577331796
+OurApp.iphone.native=3577331796
+analytics.iphone=752482804
+analytics.android=2408201680

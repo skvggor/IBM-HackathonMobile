@@ -1,5 +1,5 @@
 jQuery(document).on('pagecreate', function() {
-	var limpaHeader, criarHeader, criarFooter, criarListaPaises, limparFormulario;
+	var limpaHeader, criarHeader, criarFooter, criarListaPaises, limparFormulario, localStorageUtils;
 	
 	limparHeader = function() {
 		var header;
@@ -18,7 +18,7 @@ jQuery(document).on('pagecreate', function() {
 	criarHeader = function() {
 		var headerHTML, titulo;
 
-		titulo = 'Passeios';
+		titulo = '&#8857;';
 		headerHTML = '<div role="banner" class="ui-header ui-bar-a" data-role="header">' +
 						'<h1 aria-level="1" role="heading" class="ui-title">' +  titulo + '</h1>' +
 					 '</div>';
@@ -63,11 +63,29 @@ jQuery(document).on('pagecreate', function() {
 		formulario.attr('class', '');
 	};
 	
+	localStorageUtils = function() {
+		var	salvar, remover;
+		
+		salvar = function(nomeCampo, seletorCampo) {
+			var valor;
+
+			valor = jQuery(seletorCampo);
+			localStorage.setItem(nomeCampo, jQuery(seletorCampo).val());
+		};
+		
+		remover = function(valor) {
+			var valor;
+
+			localStorage.removeItem(valor);
+		};
+	};
+	
 	limparHeader();
 	limparFooter();
 	criarHeader();
-	criarFooter();
+	//criarFooter();
 	criarListaPaises();
 	limparFormulario();
+	localStorageUtils();
 
 });

@@ -793,4 +793,41 @@ a.ui-link-inherit {
 	outline-width: 1px;
 	outline-style: auto;
 }
-			
+
+/* Customizações */
+
+.facebook-button{
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #262847 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#262847)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#262847 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1e5799 0%,#262847 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1e5799 0%,#262847 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #1e5799 0%,#262847 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#262847',GradientType=0 ); /* IE6-9 */
+}
+
+.facebook-button:hover{
+	background: #0c213f; /* Old browsers */
+	background: -moz-linear-gradient(top, #0c213f 0%, #262847 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0c213f), color-stop(100%,#262847)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #0c213f 0%,#262847 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #0c213f 0%,#262847 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #0c213f 0%,#262847 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #0c213f 0%,#262847 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c213f', endColorstr='#262847',GradientType=0 ); /* IE6-9 */
+}
+
+.facebook-button:active{
+	background: rgb(0,0,0);
+}
+
+.facebook-button span{
+	color: rgb(255,255,255);
+	text-shadow:none;
+}
+
+img.logotipo{
+	padding:10px;
+	height:200px;
+}
