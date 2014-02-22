@@ -81,7 +81,7 @@ jQuery(document).on('pagecreate', function() {
 	};
 	
 	limparHeader();
-	limparFooter();
+	//limparFooter();
 	criarHeader();
 	//criarFooter();
 	criarListaPaises();

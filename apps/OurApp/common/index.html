@@ -11,8 +11,10 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/libs/jquery.mobile-1.3.2.css">
 	<link rel="stylesheet" href="css/libs/jquery.mobile.structure-1.3.2.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="stylesheet" href="css/themes/passeios_app.css">
 	<link rel="stylesheet" href="css/main.css">
+	
 </head>
 <body>
 	<!-- APP -->
@@ -26,7 +28,7 @@
 			<div align="center">	
 				<h2>Reunindo pessoas diferentes com mesmos interesses em lugares legais</h2>
 				<div class="rodapehome">	
-					<div class="cadastrar">
+					<div>
 						<form id="cadformulario">
 							<a href="#pagina-entrar" data-role="button" id="button">Entrar</a>
 							<a href="#pagina-cadastro" data-role="button" id="button">Registrar</a>
@@ -49,7 +51,7 @@
 				<input type="password" name="senha" id="txt-email" placeholder="Senha" required>
 					
 				<a data-icon="arrow-l" data-inline="true" href="#pagina-home" data-role="button" id="button">Cancelar</a>
-				<a data-icon="arrow-r" data-inline="true" href="#" data-role="button" id="button">Entrar</a>
+				<a data-icon="arrow-r" data-inline="true" href="#pagina-logado" data-role="button" id="button">Entrar</a>
 			</form>
 		</div>
 	</div>
@@ -73,7 +75,7 @@
 				<input type="file" name="image" accept="image/*">
 				
 				<a href="#pagina-home" data-icon="arrow-l" data-inline="true" data-role="button" id="btn-cadastrar">Cancelar</a>
-				<a href="#" data-icon="arrow-r" data-inline="true" data-role="button" id="btn-cadastrar">Cadastrar</a>
+				<a href="#pagina-logado" data-icon="arrow-r" data-inline="true" data-role="button" id="btn-cadastrar">Cadastrar</a>
 			</form>
 		</div>
 	</div>
@@ -83,7 +85,294 @@
 		<div data-role="content">
 			<div id="map-canvas"></div>
 		</div>
-	</div>	
+		<div id="rodape-home">
+			<p><a href="#pagina-home">Sair</a></p>
+	 	</div>
+	</div>
+	
+		<!-- Página Inicial -->
+	<div class="layout-pagina-inicial" data-role="page" id="pagina-logado">
+		<div data-role="content">
+			<div id="passeiosporperto">
+				<a href="#pagina-mapa" data-role="button" id="button0">Passeios por perto</a>
+			</div>
+			
+			<!-- passeios em destaque -->
+				<div class="cadastrar">
+					<h2>Passeios em destaque</h2>
+					<br>
+					<div class="caixadestaque">
+						<ul data-role="listview">
+							<li>
+								<a href="#olugar">
+									<h2>Rio de Janeiro</h2>
+									<img src="images/cristo_redentor.png" width="100" height="100">
+									<p>Final da Copa do Mundo de 2014</p>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#encontro">
+									<h2>Encontro das águas</h2>
+									<img src="images/encontro_das_aguas.png" width="100" height="100">
+									<p>Encontro festeiro depois do jogo do Brasil</p>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#porto">
+									<h2>Porto de Galinhas</h2>
+									<img src="images/porto_de_galinhas.png" width="100" height="100">
+									<p>Festa do jogo Brasil x Camarões</p>
+								</a>
+							</li>
+							
+							<li>
+								<a href="#centro">
+									<h2>Centro Político</h2>
+									<img src="images/centro_politico.png" width="100" height="100">
+									<p>Passeio no Centro Político com FUTEBOL</p>
+								</a>
+							</li>
+						</ul>
+						
+					</div>
+				 </div>		 
+	</div>
+	<div id="rodape-home">
+		 	<p><a href="#pagina-home">Sair</a></p>
+	 	</div>
+	</div>
+	
+		<!-- Formulário de cadastro -->
+	<div class="layout-form-cadastro" data-role="page" id="formulario-cadastro-evento">
+		<div data-role="header">
+			<h1>Cadastro de<br/> Evento</h1>
+		</div>
+
+		<div data-role="content">
+		 <div align="center">
+			 <div class="cadastrar">
+				<form class="form-cadastro">
+					<input type="text" name="text" id="txt-nome" placeholder="Nome do Evento">
+					<input type="text" name="text" id="txt-email" placeholder="Local">
+					<input type="password" name="text" id="txt-email" placeholder="Vou no dia">
+					<textarea id="textarea" placeholder="Descrição"></textarea>
+					<a href="#olugar" data-role="button" id="button">Cadastrar Evento</a>
+				</form>
+			 </div>		
+		 </div>	 
+	    </div>		
+	</div>
+	<!-- Fim form cadastro -->
+	
+		<!-- Página de "O Cristo Redentor" -->
+	<div class="layout-pagina-olugar" data-role="page" id="olugar">
+		<div id="cb">
+			<h1>Passeios</h1>
+		</div>
+		<div id="conteiner">
+		<div class="back">
+			<a href="#" data-rel="back"><img alt="" src="images/back.png" width="30"></a>
+		</div>	
+			<h1 class="centralizar">Cristo Redentor</h1>
+			<ul id="menu">
+			 
+				<div class="cadastrar">
+						<ul>
+						<li class="cityuf"><a href="#">Rio de Janeiro - RJ</a></li>
+						
+						<li><img src="images/cristo_redentor.png" alt="" width="320" height="100"/></li>
+						<li class="desc">O Cristo Redentor ﬁca no Morro do Corcovado, a 709 metros de altura, inaugurado no dia 12 de outubro de 1931, em 2007 foi eleito uma das novas sete maravilhas do mundo.</li>
+						<br/>
+						<li><a href="#interativo" data-role="button" id="button1">Quero Ir</a></li>
+						<br/>
+						<li><a href="#">Ver quem vai</a></li>
+						<li><a href="#">Ver comentários</a></li>
+						<li><a href="#">Ver no mapa</a></li>
+					</ul>
+			 		
+			 </div>
+			</ul>
+		</div>
+	</div>
+	
+	
+		<div class="layout-pagina-interativo" data-role="page" id="interativo">
+		<div align="center" id="int">
+				<a href="#" data-rel="back"><img alt="" src="images/back.png" width="30"></a>
+				
+				
+				<p class="space">Diga o dia para outras pessoas te encontrarem</p>
+				<h1 class="pretendo">Pretendo ir no dia:</h1>
+				
+				<div class="cadastrar">
+					<input type="date" name="date" id="date"  />
+				</div>	
+				
+				<ul class="">
+					<li><a href="#">Quero ser lembrado</a></li>
+					<li><a href="#">Compartilhar nas redes sociais</a></li>
+					<li><a href="#go" data-role="button" id="button" class="go">Go</a></li>
+				</ul>
+		</div>
+	</div>
+	
+	
+	<!-- Página de "O Cristo Redentor" -->
+	<div class="layout-pagina-olugar" data-role="page" id="olugar">
+		<div id="cb">
+			<h1>Passeios</h1>
+		</div>
+		<div id="conteiner">
+		<div class="back">
+			<a href="#" data-rel="back"><img alt="" src="images/back.png" width="30"></a>
+		</div>	
+			<h1 class="centralizar">Cristo Redentor</h1>
+			<ul id="menu">
+			 
+				<div class="cadastrar">
+						<ul>
+						<li class="cityuf"><a href="#">Rio de Janeiro - RJ</a></li>
+						
+						<li><img src="images/cristo_redentor.png" alt="" width="320" height="100"/></li>
+						<li class="desc">O Cristo Redentor ﬁca no Morro do Corcovado, a 709 metros de altura, inaugurado no dia 12 de outubro de 1931, em 2007 foi eleito uma das novas sete maravilhas do mundo.</li>
+						<br/>
+						<li><a href="#interativo" data-role="button" id="button1">Quero Ir</a></li>
+						<br/>
+						<li><a href="#">Ver quem vai</a></li>
+						<li><a href="#">Ver comentários</a></li>
+						<li><a href="#">Ver no mapa</a></li>
+					</ul>
+			 		
+			 </div>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Página de "O Lugar" -->
+	<div class="layout-pagina-olugar" data-role="page" id="encontro">
+		<div id="cb">
+			<h1>Passeios</h1>
+		</div>
+		<div id="conteiner">
+		<div class="back">
+			<a href="#" data-rel="back"><img alt="" src="images/back.png" width="30"></a>
+		</div>	
+			<h1 class="centralizar">Encontro das Águas</h1>
+			<ul id="menu">
+			 
+				<div class="cadastrar">
+						<ul>
+						<li class="cityuf"><a href="#">Manaus - AM</a></li>
+						
+						<li><img src="images/encontro_das_aguas.png" alt="" width="320" height="100"/></li>
+						<li class="desc">No século passado, foi um porto para desembarque clandestino de escravos, hoje, considerada uma das mais belas praias do Brasil.</li>
+						<br/>
+						<li><a href="#interativo" data-role="button" id="button1">Quero Ir</a></li>
+						<br/>
+						<li><a href="#">Ver quem vai</a></li>
+						<li><a href="#">Ver comentários</a></li>
+						<li><a href="#">Ver no mapa</a></li>
+					</ul>
+			 		
+			 </div>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- porto de galinhas -->
+	
+	<div class="layout-pagina-olugar" data-role="page" id="porto">
+		<div id="cb">
+			<h1>Passeios</h1>
+		</div>
+		<div id="conteiner">
+		<div class="back">
+			<a href="#" data-rel="back"><img alt="" src="images/back.png" width="30"></a>
+		</div>	
+			<h1 class="centralizar">Porto de Galinhas</h1>
+			<ul id="menu">
+			 	
+				<div class="cadastrar">
+						<ul>
+						<li class="cityuf"><a href="#">Ipojuca - PE</a></li>
+						
+						<li><img src="images/porto_de_galinhas.png" alt="" width="320" height="100"/></li>
+						<li class="desc">Com águas cristalinas, de azul cintilante, onde se vêem pequenos peixes coloridos e muitos outras espécies marinhas. Com imensos coqueirais, à praia de Porto de Galinhas se confere o conceito ideal de vida e beleza natural estonteante, onde se podem usufruir a mais almejada tranqüilidade, inerente as autênticas colônias de pescadores.</li>
+						<br/>
+						<li><a href="#interativo" data-role="button" id="button1">Quero Ir</a></li>
+						<br/>
+						<li><a href="#">Ver quem vai</a></li>
+						<li><a href="#">Ver comentários</a></li>
+						<li><a href="#">Ver no mapa</a></li>
+					</ul>
+			 		
+			 </div>
+			</ul>
+		</div>
+	</div>
+	<!-- fim porto de galinhas -->
+	
+	<!-- centro -->
+	
+	<div class="layout-pagina-olugar" data-role="page" id="centro">
+		<div id="cb">
+			<h1>Passeios</h1>
+		</div>
+		<div id="conteiner">
+		<div class="back">
+			<a href="#" data-rel="back"><img alt="" src="images/back.png" width="30"></a>
+		</div>	
+			<h1 class="centralizar">Centro Político</h1>
+			<ul id="menu">
+				<div class="cadastrar">
+						<ul>
+						<li class="cityuf"><a href="#">Brasília - DF</a></li>
+						
+						<li><img src="images/centro_politico.png" alt="" width="320" height="100"/></li>
+						<li class="desc">Não há como visitar Brasília e ignorar as belas construções que compõem os principais prédios governamentais, que ﬁcam ao longo do Eixo Monumental. Veja o roteiro de lugares:</li>
+						<br/>
+						<li><a href="#interativo" data-role="button" id="button1">Quero Ir</a></li>
+						<br/>
+						<li><a href="#">Ver quem vai</a></li>
+						<li><a href="#">Ver comentários</a></li>
+						<li><a href="#">Ver no mapa</a></li>
+					</ul>
+			 </div>
+			</ul>
+		</div>
+	</div>
+	<!-- fim porto de galinhas -->
+	
+	<div class="layout-pagina-go" data-role="page" id="go">
+		<br/>
+		<div class="back">
+			<a href="#" data-rel="back"><img alt="" src="images/back.png" width="30"></a>
+		</div>	
+		<div class="confirmado">
+			<h1>Está confirmado, nos vemos lá!</h1>
+			<a href="#pagina-logado" data-role="button" id="button2">Home</a>
+		</div>
+	</div>
+	
+	<div class="layout-pagina-esqueciminhasenha" data-role="page" id="ec">
+		<div class="cadastrar">
+			<div id="caixaec">
+			<p>Preencha com o seu e-mail e verifique sua caixa de entrada.</p><br/>
+				<input type="text" name="text0"	id="text" placeholder="E-mail"> 
+				<a href="#pagina-logado" data-role="button" id="button3">Enviar</a>
+			</div>
+		</div>
+		<div id="imagem">
+			<div class="img">
+				<img src="images/logo-app.png" width="100" alt="logoapp">
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- <div data-role="footer" class="footer" id="footer">...</div> -->
 
 	<!-- JAVASCRIPT -->
 	<script src="js/libs/jquery.js"></script>
