@@ -1,8 +1,7 @@
-"use strict";
-
 var googleMaps;
 
 googleMaps = function() {
+  "use strict";
   navigator.geolocation.getCurrentPosition(function(position){
     var infowindow, conteudoInfoWindow, estilosMapa, localizacoes, localizacao, mapOptions, mapa, iconeMarcador, marcador;
 
@@ -121,6 +120,6 @@ googleMaps = function() {
       });
     });
   });
-}
+};
 
 google.maps.event.addDomListener(window, 'load', googleMaps);
